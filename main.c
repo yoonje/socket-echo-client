@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
         printf("접속 실패\n");
         exit(1);
     }
-    write(client_socket, argv[1], strlen(argv[1]) + 1); // +1: NULL까지 포함해서 전송
+    write(client_socket, argv[1], strlen(argv[1]) + 1); // NULL까지 포함해서 전송하기 위해 +1
     close(client_socket); // 소켓 닫기
     return 0;
 }
