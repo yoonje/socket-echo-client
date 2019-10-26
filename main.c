@@ -35,4 +35,6 @@ main(int argc, char **argv) {
 
     write(client_socket, argv[1], strlen(argv[1]) + 1); // 메세지 write, NULL까지 포함해서 전송하기 위해 +1
     close(client_socket); // 소켓 닫기
+
+    return;
 }
